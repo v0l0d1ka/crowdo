@@ -1,0 +1,384 @@
+html {
+    -webkit-box-sizing: border-box; /* allows to include the padding and border in an element's total width and height. */
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #FBFCFF;
+    padding-top: 50px;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 1270px) {
+    .container {
+        max-width: 1270px;
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+p,
+small {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    color: #000;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 55px;
+}
+
+h3 {
+    color: var(--Colors-Blue, #377DED);
+    font-size: 18px;
+    line-height: 28px; /* 155.556% */
+    text-transform: uppercase;
+}
+
+small {
+    font-size: 12px;
+    line-height: 17px;
+}
+
+button {
+    cursor: pointer;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cta,
+.price,
+.logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.cta__inner {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 758px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.cta__logos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 18px;
+}
+
+.cta__text {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.cta__btn {
+    display: flex;
+    height: 49px;
+    padding: 12px 31px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: #F6961B;
+    border: none;
+    color: #fff;
+    margin: 46px auto 15px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    position: relative;
+}
+
+.cta__btn span {
+    position: absolute;
+    z-index: 2;
+    left: -60px;
+    top: -30px;
+    transform: rotate(-4.213deg);
+}
+
+.logo {
+    margin-bottom: 150px;
+}
+
+.logo__inner {
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    align-self: stretch;
+}
+
+@media (min-width: 768px) {
+    .logo__inner {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+}
+
+.logo__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo__icon {
+    width: 62px;
+    height: 62px;
+    display: flex;
+    border-radius: 14px;
+    background: #F0F3FF;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the tab */
+.price__inner {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.price__title {
+    color: #000;
+    text-align: center;
+    font-family: Raleway, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 110%; /* 39.6px */
+    margin-bottom: 50px;
+}
+
+.price__tab {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Style the buttons that are used to open the tab content */
+  .price__tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    display: flex;
+    padding: 15px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #D3DDF3;
+    color: var(--Colors-Dark-Blue, #9CACD2);
+    text-align: center;
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+}
+
+/* Create an active/current tablink class */
+.price__tab button.active {
+    border-radius: 30px;
+    border: 1px solid #D3DDF3;
+    background: var(--Colors-Blue, #377DED);
+    color: #fff;
+}
+  
+  /* Change background color of buttons on hover */
+  .price__tab button:hover {
+    background-color: #377DED;
+    color: #fff;
+  }
+
+  
+  /* Style the tab content */
+  .price__tabcontent {
+    display: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    margin-top: 60px;
+    margin-bottom: 50px;
+  }
+
+  .price__table {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .price__table {
+        align-items: flex-start;
+        flex-direction: row;
+    }
+  }
+
+  .price__card {
+    display: flex;
+    padding: 30px;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    border-radius: 20px;
+    border: 1px solid #D3DDF3;
+    background-color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    .price__card {
+        width: 25%;
+    }
+  }
+
+  .price__card-popular {
+    border-radius: 20px;
+    border: 2px solid var(--Colors-Orange, #F6961B);
+    background: #FFF6EA;
+    position: relative;
+  }
+
+  .price__card-popular h3,
+  .price__card-popular .price__cost,
+  .price__card-popular .price__btn {
+    color: #F6961B;
+  }
+
+  .price__card-popular .price__btn {
+    border-color: #F6961B;
+    background-color: #FFF6EA;
+  }
+
+  .price__card-popular::before {
+    content: "Most popular";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    text-align: center;
+    color: #fff;
+    border-radius: 50px;
+    background: var(--orange, #F6961B);
+    padding: 8px 13px;
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 140%; /* 19.6px */
+  }
+
+  .price__icon {
+    margin-bottom: 30px;
+  }
+
+  .price__list {
+    color: var(--Colors-Black, #000);
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    margin: 15px auto 30px;
+  }
+
+  .price__list li {
+    margin-bottom: 10px;
+  }
+
+  .price__list-active {
+    font-weight: 700;
+  }
+
+  .price__btn {
+    display: flex;
+    width: 100%;
+    height: 49px;
+    padding: 12px 31px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    border: 1px solid var(--Colors-Blue, #377DED);
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    background-color: #fff;
+    color: var(--Colors-Blue, #377DED);
+    margin-top: 25px;
+  }
+
+  .price__cost {
+    color: var(--Colors-Blue, #377DED);
+    font-family: Raleway;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 140%; /* 39.2px */
+  }
+
+  .price__cost del {
+    color: var(--Colors-Dark-Grey, #828282);
+    margin-right: 8px;
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
